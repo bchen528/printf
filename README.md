@@ -1,1 +1,2 @@
-# THE KING WILL NOW HAVE THE POWER OF THE BLACK PANTHER STRIPPED AWAY
+# printf
+An emulation of the printf function without the use of the C standard library.
