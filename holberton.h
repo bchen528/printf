@@ -12,7 +12,6 @@
  * pointers that point to a putchar function for
  * corresponding data type
  */
-
 typedef struct milk
 {
 	char *id;
