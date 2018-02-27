@@ -80,6 +80,11 @@ int print_di(va_list arg)
 	int n = va_arg(arg, int);
 	char *p;
 
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+	}
 	numlength = digit_count(n);
 	p = malloc(sizeof(char) * (numlength));
 
