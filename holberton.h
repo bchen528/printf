@@ -7,7 +7,7 @@
  * struct milk - structure for chars, strings, %
  * @id: character representing datatype or special character %
  * @f: print function for specific datatype/character
- * 
+ *
  * Description: struct milk contains characters c, s, %
  * that represent datatypes/special character and function
  * pointers that point to a putchar function for
