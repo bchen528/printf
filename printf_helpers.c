@@ -1,5 +1,5 @@
 #include "holberton.h"
-#include <stdio.h>
+
 /**
  * print_c - print characters
  * @arg: argument list to be assessed
