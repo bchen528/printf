@@ -70,11 +70,11 @@ int digit_count(int n)
 }
 
 /**
- * print_d - print integer
+ * print_di - print integer
  * @arg: argument
  * Return: number of characters printed
  */
-int print_d(va_list arg)
+int print_di(va_list arg)
 {
 	int i = 0, j, numlength;
 	int n = va_arg(arg, int);
