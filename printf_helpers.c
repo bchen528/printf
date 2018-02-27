@@ -76,22 +76,28 @@ int digit_count(int n)
  */
 int print_di(va_list arg)
 {
-	int i = 0, j, numlength;
+	int i = 0, j, k = 0,  numlength;
 	int n = va_arg(arg, int);
 	char *p;
+	unsigned int pos_n = 0;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n = -n;
+		pos_n = -n;
+		k++;
 	}
-	numlength = digit_count(n);
+	else
+	{
+		pos_n = n;
+	}
+	numlength = digit_count(pos_n);
 	p = malloc(sizeof(char) * (numlength));
 
 	while (numlength > 0)
 	{
-		p[i] = (n % 10) + '0';
-		n = n / 10;
+		p[i] = (pos_n % 10) + '0';
+		pos_n = pos_n / 10;
 		numlength--;
 		i++;
 	}
@@ -102,6 +108,7 @@ int print_di(va_list arg)
 		_putchar(p[j]);
 		j--;
 	}
+	k += numlength;
 	free(p);
-	return (numlength);
+	return (k);
 }
