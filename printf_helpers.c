@@ -27,11 +27,15 @@ int print_s(va_list arg)
 {
 	int i = 0;
 	char *s;
+	char *p = "(null)";
 
 	s = va_arg(arg, char *);
 
 	if (s == NULL)
-		return (0);
+	{
+		write(1, p, 6);
+		return (6);
+	}
 	while (s[i] != '\0')
 	{
 		_putchar(s[i]);
