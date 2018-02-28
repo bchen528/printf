@@ -27,6 +27,8 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
+			while (format[i] == ' ')
+				i++;
 			while (milk[j].id != NULL)
 			{
 				if (*milk[j].id == format[i])
