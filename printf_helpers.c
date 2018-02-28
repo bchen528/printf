@@ -76,7 +76,7 @@ int digit_count(int n)
  */
 int print_di(va_list arg)
 {
-	int i = 0, j, k = 0,  numlength;
+	int i = 0, j, k = 0, numlength;
 	int n = va_arg(arg, int);
 	char *p;
 	unsigned int pos_n = 0;
@@ -92,7 +92,9 @@ int print_di(va_list arg)
 		pos_n = n;
 	}
 	numlength = digit_count(pos_n);
-	p = malloc(sizeof(char) * (numlength));
+	p = malloc(sizeof(char) * (numlength + 1));
+	if (p == NULL)
+		return (-1);
 
 	while (numlength > 0)
 	{
