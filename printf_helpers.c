@@ -71,17 +71,22 @@ int digit_count(int n)
 
 /**
  * print_di - print integer
- * @arg: argument
+ * @arg: argument list
  * Return: number of characters printed
  */
 int print_di(va_list arg)
 {
-	int i = 0, j, k = 0, numlength;
+	int i, k = 0, numlength;
 	int n = va_arg(arg, int);
-	char *p;
 	unsigned int pos_n = 0;
+	int mul = 1;
 
-	if (n < 0)
+	if (n == 0)
+	{
+		_putchar(pos_n + '0');
+		return (1);
+	}
+	else if (n < 0)
 	{
 		_putchar('-');
 		pos_n = -n;
@@ -91,26 +96,24 @@ int print_di(va_list arg)
 	{
 		pos_n = n;
 	}
+
 	numlength = digit_count(pos_n);
-	p = malloc(sizeof(char) * (numlength + 1));
-	if (p == NULL)
-		return (-1);
 
-	while (numlength > 0)
+/* calculate multiplier for largest place*/
+	i = numlength;
+	while (i != 1)
 	{
-		p[i] = (pos_n % 10) + '0';
-		pos_n = pos_n / 10;
-		numlength--;
-		i++;
+		mul = mul * 10;
+		i--;
+	}
+/* print digit values as characters */
+	_putchar((pos_n / mul) + '0');
+	while (mul != 1)
+	{
+		mul = mul / 10;
+		_putchar(((pos_n / mul) % 10) + '0');
 	}
 
-	j = i;
-	while (j >= 0)
-	{
-		_putchar(p[j]);
-		j--;
-	}
 	k += numlength;
-	free(p);
 	return (k);
 }
