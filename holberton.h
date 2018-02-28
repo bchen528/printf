@@ -4,7 +4,7 @@
 #include <unistd.h>
 #include <stdlib.h>
 /**
- * struct milk - structure for chars, strings, %
+ * struct milk - structure for chars, strings, %, integers
  * @id: character representing datatype or special character %
  * @f: print function for specific datatype/character
  *
