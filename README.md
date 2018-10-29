@@ -4,46 +4,27 @@ An emulation of the printf function without the use of the C standard library.
 
 ## Examples
 **String**
-  * Input
-  ```
-  _printf("String:[%s]\n", "I am a string !");
-  ```
-  * Output
-  ```
-  String:[I am a string !]
-  ```
+  * Input: `_printf("String:[%s]\n", "I am a string !");`
+  * Output: `String:[I am a string !]`
   
 **Character**
-  * Input
-  ```
-  _printf("Character:[%c]\n", 'H');
-  ```
-  * Output
-  ```
-  Character:[H]
-  ```
+  * Input:
+  `_printf("Character:[%c]\n", 'H');`
+  * Output:
+  `Character:[H]`
   
 **Integer**
-  * Input
+  * Input:
   ```
   int len;
   len = _printf("Let's try to printf a simple sentence.\n");
   _printf("Length:[%d, %i]\n", len, len);
   ```
-  * Output
-  ```
-  Length:[39, 39]
-  ```
+  * Output: `Length:[39, 39]`
 
 **Percent**
-  * Input
-  ```
-  _printf("Percent:[%%]\n");
-  ```
-  * Output
-  ```
-  Percent:[%]
-  ```
+  * Input: `_printf("Percent:[%%]\n");`
+  * Output: `Percent:[%]`
 
 ## Requirements
   * All files will be compiled on Ubuntu 14.04 LTS
