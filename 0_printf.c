@@ -1,7 +1,7 @@
 #include "holberton.h"
 
 /**
- * _printf - products output according to format
+ * _printf - prints output according to format
  * @format: format string
  * Return: number of characters printed, excluding \0
  */
