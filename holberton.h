@@ -1,5 +1,5 @@
-#ifndef TEA
-#define TEA
+#ifndef __PRINTF__
+#define __PRINTF__
 #include <stdarg.h>
 #include <unistd.h>
 #include <stdlib.h>
@@ -25,4 +25,4 @@ int print_c(va_list);
 int print_s(va_list);
 int print_per(va_list);
 int print_di(va_list);
-#endif /*TEA*/
+#endif /*__PRINTF__*/
